@@ -1,0 +1,32 @@
+<div Align="Center">
+{% extends "base.html" %}
+
+{% block the_body %}
+<form action="{{ rankboard }}" method="POST">
+
+{% for line in the_data %}
+<p>
+    {{ line }}
+</p>
+{% endfor %}
+
+<p>
+    <br \>
+   Your time: &nbsp; {{ time_taken }}
+</p>
+
+    <br \>
+
+<p>
+    Your Name:
+    <input type="TEXT" name='name'>
+</p>
+
+    <br \>
+
+<p>
+    <input type="SUBMIT" value="Submit">
+</p>
+</form>
+{% endblock %}
+</div>

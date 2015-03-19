@@ -1,0 +1,25 @@
+<div Align="Center">
+    {% extends "base.html" %}
+
+    {% block the_body %}
+    <p>
+        <u>No.</u>
+        &nbsp;|<u>Player</u>
+        &nbsp;&nbsp;|<u>Time</u>
+    </p>
+    {% for line in rank_list %}
+
+    {% if (loop.index <= 10) %}
+    <p>
+        &nbsp;{{loop.index}}:&nbsp;&nbsp;{{ line.0 }}&nbsp;|&nbsp;{{line.1}} seconds
+    </p>
+    {% endif %}
+    {% endfor %}
+
+    <br /><br /><br />
+    <form action={{home_link}}>
+        <input type="submit" value="Home">
+    </form>
+
+    {% endblock %}
+</div>

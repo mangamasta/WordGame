@@ -1,0 +1,51 @@
+<div Align="Center">
+{% extends "base.html" %}
+{% block the_body %}
+<form action="{{ the_save_url }}" method="POST">
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <p>
+    First Guess: 
+    <input type="TEXT" name="first_guess">
+    </p>
+    <p>
+    Second Guess: 
+    <input type="TEXT" name="second_guess">
+    </p>
+    <p>
+    Third Guess: 
+    <input type="TEXT" name="third_guess">
+    </p>
+    <p>
+    Fourth Guess: 
+    <input type="TEXT" name="fourth_guess">
+    </p>
+    <p>
+    Fifth Guess: 
+    <input type="TEXT" name="fifth_guess">
+    </p>
+	Sixth Guess: 
+    <input type="TEXT" name="sixth_guess">
+    </p>
+	Last Guess: 
+    <input type="TEXT" name="seventh_guess">
+    </p>
+
+    <p>
+    <input type="SUBMIT" value="Submit">
+    </p>
+
+</form>
+
+
+{% endblock %}
+</div>
