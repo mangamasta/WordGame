@@ -5,7 +5,7 @@ import sys
 def readDataFirst():
 
     sql = "SELECT usr_name,time FROM rank ORDER BY time "
-    con = lite.connect('C:/Users/Yoseph/IdeaProjects/WordGame/rank.db')
+    con = lite.connect('rank.db')
     sql_list_first = []
     with con:
         cur = con.cursor()
