@@ -9,7 +9,7 @@ def sql_lite():
         (user, full_time)
     )
 
-    con = lite.connect('C:/Users/Yoseph/IdeaProjects/WordGame/rank.db')
+    con = lite.connect('rank.db')
 
     with con:
         cur = con.cursor()
@@ -22,7 +22,7 @@ def sql_lite():
 def readData():
 
     sql = "SELECT usr_name,time FROM rank ORDER BY time "
-    con = lite.connect('C:/Users/Yoseph/IdeaProjects/WordGame/rank.db')
+    con = lite.connect('rank.db')
     sql_list = []
     with con:
         cur = con.cursor()
